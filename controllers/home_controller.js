@@ -1,5 +1,7 @@
 module.exports.home=function(req,res){
-    return res.send('Hello on the home page.');
+    return res.render('home',{
+        tittle:"Todo List."
+    });
 }
 
 module.exports.newHome=function(req,res){

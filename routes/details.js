@@ -3,6 +3,7 @@ const   router          =       express.Router();
 const   detailController=       require('../controllers/detail_controller');
 
 
+
 router.get('/',detailController.detail);
 
 
