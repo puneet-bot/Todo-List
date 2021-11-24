@@ -3,6 +3,7 @@ const   router          =       require('./routes/index');
 var     app             =       express();
 const   port            =       8000;
 const   expressLayouts  =       require('express-ejs-layouts');
+const   db              =       require('./config/moongoose');
 
 app.use(expressLayouts);
 
