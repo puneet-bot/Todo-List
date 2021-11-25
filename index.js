@@ -4,6 +4,7 @@ var     app             =       express();
 const   port            =       8000;
 const   expressLayouts  =       require('express-ejs-layouts');
 const   db              =       require('./config/moongoose');
+const   list            =       require('./models/list');
 
 app.use(expressLayouts);
 

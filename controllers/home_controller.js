@@ -1,7 +1,11 @@
+const   list            =       require('../models/list');
+
+
 module.exports.home=function(req,res){
     return res.render('home',{
         tittle:"Todo List"
     });
+    
 }
 
 module.exports.newHome=function(req,res){
