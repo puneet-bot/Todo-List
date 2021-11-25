@@ -1,4 +1,22 @@
 body{
-    color: red;
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    margin: 0 auto;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+.task{
+    background-color: white;
+    width: 60%;
+}
+.division{
+    display: flex;
+
+}
+.division > div {
+    width: 50%;
     text-align: center;
 }

@@ -1,9 +1,21 @@
 var mongoose = require('mongoose');  
 var listSchema = new mongoose.Schema({  
-  task: String,
-  description: Number,
-  date: { type: Date, default: Date.now },
-  isCompleted: Boolean
+  task: {
+    type:String,
+    required:true
+  },
+  category:{
+    type:String,
+    required:true
+  },
+  date: { 
+    type: String,
+    required:true
+    },
+  isCompleted: {
+    type:Boolean,
+    default:false
+  }
 });
 mongoose.model('list', listSchema);
 

@@ -4,7 +4,7 @@ const   detailController=       require('../controllers/detail_controller');
 
 
 
-router.get('/',detailController.detail);
+router.post('/',detailController.detail);
 
 
 module.exports=router;

@@ -1,1 +1,35 @@
-<h1>Welcome to the Home Page.</h1>
+<link rel="stylesheet" href="css/index.css">
+<div id="container">
+    <div class="task">
+        <div>
+            <h1>TODO APP</h1>
+        </div>
+        <form action="/" method="POST">
+            <input type="text" placeholder="What Do you need to do" name="description">
+                <select name="category">
+                    <option>Choose a Category</option>
+                    <option>School</option>
+                    <option>Work</option>
+                    <option>Sport</option>
+                    <option>Routine</option>
+                </select>
+                <input type="date" name="date">
+                <input type="submit" value="Add Task">
+        </form>
+        <form action="/detail" method="POST">
+        <div class="Complete">
+            <% for (const prop in mylist) { %>
+                <div>
+                    <input type="checkbox" name="<%= mylist[prop]._id; %>">
+               <%=  mylist[prop].task; %>
+               <%=  mylist[prop].category; %>
+               <%=  mylist[prop].date; %>
+                </div>
+           <% } %>   
+           <input type="submit" value="Delete Task" id="deleteBtn">
+
+        </div>
+        </form>
+    </div>
+    
+</div>
