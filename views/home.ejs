@@ -1,35 +1,56 @@
 <link rel="stylesheet" href="css/index.css">
-<div id="container">
-    <div class="task">
-        <div>
-            <h1>TODO APP</h1>
-        </div>
-        <form action="/" method="POST">
-            <input type="text" placeholder="What Do you need to do" name="description">
-                <select name="category">
-                    <option>Choose a Category</option>
-                    <option>School</option>
-                    <option>Work</option>
-                    <option>Sport</option>
-                    <option>Routine</option>
-                </select>
-                <input type="date" name="date">
-                <input type="submit" value="Add Task">
-        </form>
-        <form action="/detail" method="POST">
-        <div class="Complete">
-            <% for (const prop in mylist) { %>
-                <div>
-                    <input type="checkbox" name="<%= mylist[prop]._id; %>">
-               <%=  mylist[prop].task; %>
-               <%=  mylist[prop].category; %>
-               <%=  mylist[prop].date; %>
-                </div>
-           <% } %>   
-           <input type="submit" value="Delete Task" id="deleteBtn">
-
-        </div>
-        </form>
+<div class="box">
+    <div id="header">
+        <h1 id="box-heading">TODO APP</h1>
     </div>
-    
+    <div id="myform">
+        <form action="/" method="POST">
+            <div id="param1">
+                <label>Description</label><br>
+                <input type="text" name="description" placeholder="What do you want to do?" id="Description" required>
+            </div>
+            <div id="TwoParam">
+                <div class="parta" id="param2" >
+                    <select name="category" id="cat" required>
+                        <option value="">Select a Category.</option>
+                        <option value="Task">Task</option>
+                        <option value="School">School</option>
+                        <option value="Work">Work</option>
+                        <optio value="Self">Self</optio>
+                        <option value="Home">Home</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="partb" id="param3">
+                    <input type="date" name="date" id="mydate" required >
+                </div>
+            </div>
+            <div id="Buttons">
+                <button id="Addbtn">Add Task</button>
+            </form>
+            <form action="/detail"  method="POST">
+                <button id="Delbtn">Remove Task</button>
+            </div>
+            <% var count=0; %>
+            <% for(let i=0;i<mylist.length;i++){ %>
+                <% if(mylist.length >=1){ %>
+                    <% if(count<1){ %>
+                    <div id="display-task-heading">
+                        <h1 id="display-i-head">Todo List<br><<<<<< >>>>>>></h1>
+                    </div>
+                    <% ++count; } %>
+            <div id="display-tasks">
+                <div id="display-body">
+                        <input type="checkbox" name="<%= mylist[i]._id %>" class="my-checkbox" value="<%= mylist[i]._id %>">
+                        <p id="display-i-name"><%= mylist[i].task %><br><span id="display-i-date"><i class="fas fa-calendar-day"></i> <%= mylist[i].date %></span></p>
+                        <button id="tag"><%= mylist[i].category %></button>
+                        
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+        </form>
+
+    </div>
 </div>
+<script src="js/index.js"></script>

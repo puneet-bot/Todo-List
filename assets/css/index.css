@@ -1,22 +1,99 @@
 body{
-    margin: 0px;
-    padding: 0px;
-}
-#container{
-    margin: 0 auto;
     background-color: grey;
-    display: flex;
-    justify-content: center;
+    margin:0;
+    padding:0;
 }
-.task{
+.box{
     background-color: white;
-    width: 60%;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
-.division{
+.box>div,#Buttons,
+#param1,#TwoParam{
+    border-bottom: 2px solid lightgrey;
+}
+#header{
+    width: 100%;
+}
+#box-heading{
+    text-align: center;
+    font-family: 'Monoton', cursive;
+}
+.parta,.partb{
+    width: 50%;
+    height: 40px;
+    display: inline-block;
+}
+.partb{
+    /* margin-left: 5%; */
+    border-left: 2px solid lightgrey;
+    width: 40%;
+    margin-left: 2%;
+}
+#param1,#param2,#param3{
+    padding: 10px;
+}
+.my-checkbox{
+    height: 20px;
+    width: 20px;
+}
+#Description{
+    width: 85%;
+    border: none;
+}
+#cat{
+    width: 200px;
+    font-size: 16px;
+}
+ input:focus,select,button{
+    outline: none;
+    border: none;
+}
+#Buttons{
     display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+#Delbtn,#Addbtn,
+#tag{
+    background-color: red;
+    color: white;
+    height: 30px;
+    width: 100px;
+    margin: 10px;
+font-family: 'Luckiest Guy', cursive;
+}
+#Addbtn{
+    background-color: yellow;
+    color: black;
+}
+#tag{
+    background-color: crimson;
+    float: right;
+    font-family: 'Luckiest Guy', cursive;
 
 }
-.division > div {
-    width: 50%;
+#display-tasks{
+    margin-top: 20px;
+}
+#display-body{
+    display: inline-block;
+    /* padding-bottom: 5px; */
+    border-bottom: 2px solid black;
+    width: 95%;
+}
+#display-body>p{
+    display: inline-block;
+}
+#display-i-date{
+    font-family: 'Yellowtail', cursive;
+}
+#display-i-name{
+    font-family: 'Permanent Marker', cursive;
+}
+#display-i-head{
     text-align: center;
+font-family: 'Fredericka the Great', cursive;
 }

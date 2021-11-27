@@ -4,7 +4,7 @@ module.exports.detail=function(req,res){
     for (const property in req.body) {
         list.findByIdAndDelete(property, function (err, docs) {
             if (err){
-                console.log(err);
+                console.log(`There is an Error ${err}`);
             }
             else{
                 //modal to come here ...
